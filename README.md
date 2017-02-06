@@ -5,5 +5,5 @@
 1. [图片序列帧](http://tgideas.github.io/motion/doc/data/component/mo.Film.html)（支持多图形式和雪碧图形式）
 2. [抽奖组件](http://tgideas.github.io/motion/doc/data/component/mo.Lottery.html)（支持圆形转盘抽奖和普通方形样式抽奖）
 3. [图片编辑组件](https://github.com/rkweb/imgEditor)（支持图片移动、缩放、旋转、导出编辑后的图片base64） 
-4. [Canvas移动端绘图](./elCanvas)（支持导出base64）
-5. [Swiper系列文章](./swiper-docs)(关于Swiper的使用技巧、常用参数属性和方法说明、使用Swiper常见问题)
+4. [Canvas绘图](./elCanvas)（支持导出base64）
+5. [Swiper常见问题总结](./swiper-docs)(关于Swiper的使用技巧、常用参数属性和方法说明、使用Swiper常见问题)
