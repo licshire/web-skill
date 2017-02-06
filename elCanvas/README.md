@@ -3,6 +3,8 @@ Canvas移动端绘图（支持导出base64）
 demo:[http://test.go.163.com/go/2015/public/team/liwenhui/elCanvas/](http://test.go.163.com/go/2015/public/team/liwenhui/elCanvas/)
 
 ## 引用js ##
+（首先引用Zepto：http://go.163.com/2015/public/common/js/zepto.min.js）
+  
 http://test.go.163.com/go/2015/public/team/liwenhui/elCanvas/js/elCanvas.js
 
 ## 接口说明 ##
