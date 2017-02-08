@@ -11,3 +11,4 @@
 7. [视差引擎Parallax.js](http://www.jq22.com/jquery-info178)（简单，轻量级的的视差引擎，智能设备的方向作出反应。凡没有陀螺仪或运动检测硬件是可用的，光标的位置来代替，支持PC、移动端）
 8. [新闻客户端接口](http://doc.ws.netease.com/pages/viewpage.action?pageId=2886075)（网易新闻客户端接口）
 9. [基于gulp的构建工具](https://github.com/rkweb/gulp-tool)（包括css、js合并压缩、图片压缩（支持jpg、png、gif压缩）、保存代码时浏览器自动刷新、sass编译、生成雪碧图等）
+10. [PC端全屏自适应翻页](https://github.com/momo1030/Plugins/tree/master/pc-responsive)（基于swiper2）
