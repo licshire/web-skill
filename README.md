@@ -12,3 +12,4 @@
 8. [新闻客户端接口](http://doc.ws.netease.com/pages/viewpage.action?pageId=2886075)（网易新闻客户端接口）
 9. [基于gulp的构建工具](https://github.com/rkweb/gulp-tool)（包括css、js合并压缩、图片压缩（支持jpg、png、gif压缩）、保存代码时浏览器自动刷新、sass编译、生成雪碧图等）
 10. [PC端全屏自适应翻页](https://github.com/momo1030/Plugins/tree/master/pc-responsive)（基于swiper2）
+11. [H5解锁样式绘图](https://github.com/NalvyBoo/H5lock)（九宫格样式扩展，支持Canvas和图片）
