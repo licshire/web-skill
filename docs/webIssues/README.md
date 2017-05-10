@@ -5,9 +5,7 @@
 - [全屏视频实现方法](#全屏视频实现方法)
 - [需要长按但不选中文本的方法](#需要长按但不选中文本的方法)
 - [二维码在微信客户端长按识别注意事项](#二维码在微信客户端长按识别注意事项)
-- [安卓软键盘挤压页面解决方法](#安卓软键盘挤压页面解决方法)
-- [ios强制内联播放视频而不自动全屏的方法](#ios强制内联播放视频而不自动全屏的方法)
-- [手机浏览器浏览WebApp弹出的键盘遮盖住文本框的解决办法](#手机浏览器浏览WebApp弹出的键盘遮盖住文本框的解决办法)
+- [安卓输入框弹出键盘遮盖住文本框的解决办法](#安卓输入框弹出键盘遮盖住文本框的解决办法)
 
 ### 全屏视频实现方法
 
@@ -69,32 +67,7 @@ $(window).bind("resize",function(){
 //css 不要用绝对定位
 ```
 
-### 安卓软键盘挤压页面解决方法
-
-```javascript
-//让文档高度等于窗口高度
-var winHeight = $(window).height();  
-$("body").height(winHeight);
-		
-//input获得焦点时向上移动页面
-$("input#name").focus(function(){
-	var num = $(this).offset().top-500+"px";
-	$("body").animate({scrollTop:num},600);
-});
-//input失去焦点时还原页面位置
-$('input#name').blur(function(){
-	$('body').animate({scrollTop:0},600);  
-});
-```
-
-### ios强制内联播放视频而不自动全屏的方法
-
-```html
-//加video标签的属性x-webkit-airplay="true" webkit-playsinline="true"
-<video src="" width="100%" height="100%" controls="controls" x-webkit-airplay="true" webkit-playsinline="true"></video>
-```
-
-### 手机浏览器浏览WebApp弹出的键盘遮盖住文本框的解决办法
+### 安卓输入框弹出键盘遮盖住文本框的解决办法
 
 ```javascript
 if(/Android [4-6]/.test(navigator.appVersion)) {
