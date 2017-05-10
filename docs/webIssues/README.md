@@ -64,7 +64,11 @@ $(window).bind("resize",function(){
 ```html
 //html 用img标签
 <img class="qr" src="img/s4/qr.png" alt="">
-//css 不要用绝对定位
+//css 不要用绝对定位 定位时只能用padding
+```css
+.qr {
+    padding: 327px 0 0 144px;
+}
 ```
 
 ### 安卓输入框弹出键盘遮盖住文本框的解决办法
