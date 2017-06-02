@@ -14,4 +14,4 @@
 10. [PC端全屏自适应翻页](https://github.com/momo1030/Plugins/tree/master/pc-responsive)（基于swiper2）
 11. [H5解锁样式绘图](https://github.com/NalvyBoo/H5lock)（九宫格样式扩展，支持Canvas和图片）
 12. [移动端常见问题总结](./docs/webIssues)（移动端开发常见问题汇总）
-13. [视差滚动](./docs/skrollr)(用于移动端和PC端的独立视差滚动库)
+13. [视差滚动](./docs/skrollr)（用于移动端和PC端的独立视差滚动库）
