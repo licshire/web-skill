@@ -104,5 +104,5 @@ html,body{
 [https://github.com/Prinzhorn/skrollr](https://github.com/Prinzhorn/skrollr)
 
 [demo1]:http://test.go.163.com/go/2017/0530/sxproject_three/
-[demo2]:http://test.go.163.com/go/2017/0530/glgs/](http://test.go.163.com/go/2017/0530/glgs/
-[demo3]:http://test.go.163.com/go/2017/0530/sx/](http://test.go.163.com/go/2017/0530/sx/
+[demo2]:http://test.go.163.com/go/2017/0530/glgs/
+[demo3]:http://test.go.163.com/go/2017/0530/sx/
