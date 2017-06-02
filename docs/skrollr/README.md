@@ -7,19 +7,19 @@
 
 ## Dome
 
-[Demo1](demo1)（wap）
+[Demo1][demo1]（wap）
 
 ![](../../images/skrollr-eqCode1.png) 
 
 -----------
 
-[Demo2](demo2)（wap）
+[Demo2][demo2]（wap）
 
 ![](../../images/skrollr-eqCode2.png)
 
 ----------
   
-[Demo3](demo3)（PC）
+[Demo3][demo3]（PC）
 
 
 ## 使用说明
