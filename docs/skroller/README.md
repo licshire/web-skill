@@ -29,7 +29,7 @@
 ```html
 <div id="slides-container">
 	//data值从0-1200-1800-2400中每段间隔执行不同动画
-    <div id="rect" 
+	<div id="rect" 
 		data-0="top:0%;left:0%" 
 		data-1200='top:50%;left:50%' 
 		data-1800='top:50%;left:100%' 
@@ -86,15 +86,15 @@ html,body{
 
 2. 如果想让页面保持不动的执行动画，例如data-1200到data-1800之间停止垂直动画，开始水平动画，代码如下：
 
-```html
-<div id="rect" 
-	data-0="top:0%;left:0%" 
-	// 上下的位置一样，左右可变值
-	data-1200='top:50%;left:50%' 
-	data-1800='top:50%;left:100%' 
-	data-2400='top:90%;left:0%'>
-</div>
-```
+	```html
+	<div id="rect" 
+		data-0="top:0%;left:0%" 
+		// 上下的位置一样，左右可变值
+		data-1200='top:50%;left:50%' 
+		data-1800='top:50%;left:100%' 
+		data-2400='top:90%;left:0%'>
+	</div>
+	```
 
 3. 不建议在单页面出现大量的动画，在移动端可能会有卡顿的现象
 
