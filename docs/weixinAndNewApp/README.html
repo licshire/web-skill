@@ -1028,7 +1028,7 @@ body .markdown-body
 &nbsp;&nbsp;&nbsp;如果含有code参数获取到code参数值，并把code值通过接口提交给后台，后台会返回微信用户的信息;</li>
 </ol>
 <blockquote>
-<p>tips:如果分享出去的链接带code参数的话，那就需要判断下h5 url中的code 参数是微信授权返回的code还是分享出去的code;如果是微信授权返回的code，则可以提交后台，如果不是则跳转微信授权链接;（可在分享链接时，在后面加一个flag参数，用来标记code参数是分享出去)</p>
+<p><em>tips</em>:如果分享出去的链接带code参数的话，那就需要判断下h5 url中的code 参数是微信授权返回的code还是分享出去的code;如果是微信授权返回的code，则可以提交后台，如果不是则跳转微信授权链接;（可在分享链接时，在后面加一个flag参数，用来标记code参数是分享出去)~</p>
 </blockquote>
 <h2 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>网易新闻客户端登录问题</h2>
 <ul>
@@ -1039,6 +1039,9 @@ body .markdown-body
 <p>客户端支持协议『login://』，客户端会通过该协议为活动页面提供用户登录信息（若客户端当前未登录将调用原生登录界面），登录验证成功后，客户端会回调『__newsapp_login_done(info)』来返回用户信息,其中info是一个字典，格式{name:&rdquo;用户名&rdquo;,nickname:&rdquo;昵称&rdquo;,head:&rdquo;头像url&rdquo;,loginType:&rdquo;netease&rdquo;}。</p>
 </li>
 </ul>
+<blockquote>
+<p>以下代码必须放在全局作用域下才能生效</p>
+</blockquote>
 <pre><code class="javascript">
 function __newsapp_userinfo_done(info){         
     //跳转'userinfo://' 协议的回调
@@ -1050,10 +1053,15 @@ function __newsapp_login_done(info){  //登录完成后
 
 window.addEventListener(&quot;load&quot;,function(){
     if(navigator.userAgent.indexOf(&quot;NewsApp&quot;)&gt;=0){
-        window.location=&quot;userinfo://&quot;;    // 
+        window.location=&quot;userinfo://&quot;;    
     }
 },false);
 
+window.addEventListener(&quot;load&quot;,function(){
+    if(navigator.userAgent.indexOf(&quot;NewsApp&quot;)&gt;=0){
+        window.location.href=&quot;login://&quot;;   
+    }
+},false);
 
 
 </code></pre></article></body></html>

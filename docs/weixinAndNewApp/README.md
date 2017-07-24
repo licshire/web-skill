@@ -2,14 +2,14 @@
 >后台会给你提供:
 >* 一个微信授权链接类似这种（authorize_url）：
 https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx41cc878a253b1ba2&redirect_uri=http%3A%2F%2Fgo.163.com%2F2017%2F0721%2Fsiemens%2Findex.html&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect
-* 一个提交code值的接口如:common.php?act=getUserInfo
+>* 一个提交code值的接口如:common.php?act=getUserInfo
 
 1. 判断是不是微信端打开h5;
 2. 判断h5 url中是否含有 code 参数;
 3. 如果不含有code参数,则页面跳转微信授权链接authorize_url;
 &nbsp;&nbsp;&nbsp;如果含有code参数获取到code参数值，并把code值通过接口提交给后台，后台会返回微信用户的信息;
 
->tips:如果分享出去的链接带code参数的话，那就需要判断下h5 url中的code 参数是微信授权返回的code还是分享出去的code;如果是微信授权返回的code，则可以提交后台，如果不是则跳转微信授权链接;（可在分享链接时，在后面加一个flag参数，用来标记code参数是分享出去)
+>*tips*:如果分享出去的链接带code参数的话，那就需要判断下h5 url中的code 参数是微信授权返回的code还是分享出去的code;如果是微信授权返回的code，则可以提交后台，如果不是则跳转微信授权链接;（可在分享链接时，在后面加一个flag参数，用来标记code参数是分享出去)~
 
 ## 网易新闻客户端登录问题
 
