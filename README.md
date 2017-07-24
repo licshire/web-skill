@@ -16,3 +16,4 @@
 12. [移动端常见问题总结](./docs/webIssues)（移动端开发常见问题汇总）
 13. [视差滚动](./docs/skrollr)（用于移动端和PC端的独立视差滚动库）
 14. [重力控制屏幕滚动](https://github.com/NalvyBoo/gravityScroll)（移动端利用重力控制屏幕滚动，基于DOM）
+15. [微信授权和新闻客户端登录问题](./docs/weixinAndNewApp)
