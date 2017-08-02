@@ -106,24 +106,24 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 
 ```css
 .video {
-    position: absolute;
+  position: absolute;
 }
 .fullscreen .video {
-	width: 100%;
-    height: 100%;
-    object-position: center top;
+  width: 100%;
+  height: 100%;
+  object-position: center top;
 }
 .fullscreen .header {
-	width: 100%;
-    height: 128px;
-    background: #373B3E;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9999;
+  width: 100%;
+  height: 128px;
+  background: #373B3E;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 }
 .fullscreen .video {
-    object-position: center 128px;
+  object-position: center 128px;
 }
 ```
 
@@ -131,15 +131,15 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 var player = document.getElementById('video');
 
 player.addEventListener('x5videoenterfullscreen', function() {
-    // 设为屏幕尺寸
-    player.style.width = document.body.width + 'px';
-	player.style.height = (document.body.height-128) + 'px';
-    // 在body上添加样式类以控制全屏下的展示
-    document.body.classList.add('fullscreen');
+  // 设为屏幕尺寸
+  player.style.width = document.body.width + 'px';
+  player.style.height = (document.body.height-128) + 'px';
+  // 在body上添加样式类以控制全屏下的展示
+  document.body.classList.add('fullscreen');
 });
 
 player.addEventListener('x5videoexitfullscreen', function() {
-    player.style.width = player.style.height = '';
-    document.body.classList.remove('fullscreen');
+  player.style.width = player.style.height = '';
+  document.body.classList.remove('fullscreen');
 }, false);
 ```
