@@ -90,12 +90,15 @@ if(/Android [4-6]/.test(navigator.appVersion)) {
 
 ### 安卓全屏视频无播放条高度保持不变解决办法
 
+安卓微信默认与使用X5同层对比图
+![安卓微信默认与使用X5同层对比图](../../images/fullScene.jpg)
+
 Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyoutaidu/test.html)  
 原文链接： [点此查看](https://zhuanlan.zhihu.com/p/27559167)
 
 ```html
 <meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
-<body code="no">
+<body>
 	<header id="header" class="header"></header>
     <video id="video" class="video" poster="img/bg.jpg" autoplay="false" src="http://flv2.bn.netease.com/videolib3/1707/31/UwslJ1623/HD/UwslJ1623-mobile.mp4" width="640" preload="auto" x-webkit-airplay="true" playsinline="true" webkit-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true"></video>
 </body>
@@ -103,30 +106,26 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 
 ```css
 <style type="text/css">
-	.player {
-		width: 100%;
-		height: 100%;
-	}
 	.video {
-		width: 100%;
-		height: 100%;
+	    position: absolute;
 	}
 	.fullscreen .video {
-		object-position: center 128px;
+		width: 100%;
+	    height: 100%;
+	    object-position: center top;
 	}
 	.fullscreen .header {
 		width: 100%;
-		height: 128px;
-		background: #373B3E;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 9999;
+	    height: 128px;
+	    background: #373B3E;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    z-index: 9999;
 	}
 	.fullscreen .video {
-		object-position: center 128px;
+	    object-position: center 128px;
 	}
-	</style>
 ```
 
 ```javascript
