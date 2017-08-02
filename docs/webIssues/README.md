@@ -111,7 +111,7 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 .fullscreen .video {
   width: 100%;
   height: 100%;
-  object-position: center top;
+  object-position: center 128px;
 }
 .fullscreen .header {
   width: 100%;
@@ -121,9 +121,6 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
   top: 0;
   left: 0;
   z-index: 9999;
-}
-.fullscreen .video {
-  object-position: center 128px;
 }
 ```
 
