@@ -101,6 +101,7 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 <body>
   <!--安卓下视频蒙版 点击播放视频-->
   <div class="masker"></div>
+  <!--X5播放器下伪标题栏-->
   <header id="header" class="header"></header>
   <video id="video" class="video" poster="img/bg.jpg" src="http://flv2.bn.netease.com/videolib3/1707/31/UwslJ1623/HD/UwslJ1623-mobile.mp4" width="640" preload="auto" x-webkit-airplay="true" playsinline="true" webkit-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true"></video>
 </body>
