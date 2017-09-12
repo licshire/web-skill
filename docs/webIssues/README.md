@@ -99,6 +99,8 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 ```html
 <meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
 <body>
+  <!--安卓下视频蒙版 点击播放视频-->
+  <div class="masker"></div>
   <header id="header" class="header"></header>
   <video id="video" class="video" poster="img/bg.jpg" src="http://flv2.bn.netease.com/videolib3/1707/31/UwslJ1623/HD/UwslJ1623-mobile.mp4" width="640" preload="auto" x-webkit-airplay="true" playsinline="true" webkit-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true"></video>
 </body>
@@ -124,6 +126,16 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
   left: 0;
   z-index: 9999;
 }
+.masker{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: url("../img/poster.jpg") no-repeat center;
+  z-index: 100;
+  display: none;
+}
 ```
 
 ```javascript
@@ -142,4 +154,15 @@ player.addEventListener('x5videoexitfullscreen', function() {
   player.style.width = player.style.height = '';
   document.body.classList.remove('fullscreen');
 }, false);
+
+// 安卓下视频蒙版控制
+if(netease.ua.android && (netease.ua.weixin || netease.ua.newsapp)){
+  $('.masker').show();
+  $('.masker').click(function(){
+    $('#video')[0].play();
+    setTimeout(function(){
+      $('.masker').hide();
+    },500);
+  });
+}
 ```
