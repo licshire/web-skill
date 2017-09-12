@@ -111,8 +111,10 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 .fullscreen .video {
   width: 100%;
   height: 100%;
-  object-position: center 128px;
+  //X5播放器视频的位置，此处下移128像素
+  object-position: center 128px;
 }
+// X5播放器下伪标题栏
 .fullscreen .header {
   width: 100%;
   height: 128px;
@@ -125,12 +127,13 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 ```
 
 ```javascript
+// 设置播放器的宽高
 var player = document.getElementById('video');
 
 player.addEventListener('x5videoenterfullscreen', function() {
   // 设为屏幕尺寸
-  player.style.width = document.body.width + 'px';
-  player.style.height = (document.body.height-128) + 'px';
+  player.style.width = document.body.width + 'px';// 建议此处写具体的值，如'640px'
+  player.style.height = (document.body.height-128) + 'px';// 建议此处写具体的值，如'1158px'(1030+128 需加上伪标题栏高度)
   // 在body上添加样式类以控制全屏下的展示
   document.body.classList.add('fullscreen');
 });
