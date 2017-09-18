@@ -145,8 +145,8 @@ var player = document.getElementById('video');
 
 player.addEventListener('x5videoenterfullscreen', function() {
   // 设为屏幕尺寸
-  player.style.width = document.body.width + 'px';// 建议此处写具体的值，如'640px'
-  player.style.height = (document.body.height-128) + 'px';// 建议此处写具体的值，如'1158px'(1030+128 需加上伪标题栏高度)
+  player.style.width = '640px';// 建议此处写具体的值，如'640px'
+  player.style.height = '1158px';// 建议此处写具体的值，如'1158px'(1030+128 需加上伪标题栏高度)
   // 在body上添加样式类以控制全屏下的展示
   document.body.classList.add('fullscreen');
 });
