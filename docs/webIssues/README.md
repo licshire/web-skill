@@ -126,10 +126,10 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 .fullscreen .video {
   width: 100%;
   height: 100%;
-  //X5播放器视频的位置，此处下移128像素
+  /*X5播放器视频的位置，此处下移128像素*/
   object-position: center 128px;
 }
-// X5播放器下伪标题栏
+/*X5播放器下伪标题栏*/
 .fullscreen .header {
   width: 100%;
   height: 128px;
@@ -165,7 +165,7 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 ```
 
 ```javascript
-// 设置播放器的宽高
+// 设置X5播放器的宽高
 var player = document.getElementById('video');
 
 player.addEventListener('x5videoenterfullscreen', function() {
