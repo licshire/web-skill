@@ -122,6 +122,7 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 }
 .video {
   position: absolute;
+  width: 100%;
 }
 .fullscreen .video {
   width: 100%;
@@ -169,15 +170,11 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 var player = document.getElementById('video');
 
 player.addEventListener('x5videoenterfullscreen', function() {
-  // 设为屏幕尺寸
-  player.style.width = '640px';// 建议此处写具体的值，如'640px'
-  player.style.height = '1158px';// 建议此处写具体的值，如'1158px'(1030+128 需加上伪标题栏高度)
   // 在body上添加样式类以控制全屏下的展示
   document.body.classList.add('fullscreen');
 });
 
 player.addEventListener('x5videoexitfullscreen', function() {
-  player.style.width = player.style.height = '';
   document.body.classList.remove('fullscreen');
 }, false);
 
@@ -192,13 +189,10 @@ if(netease.ua.android && (netease.ua.weixin || netease.ua.newsapp)){
   });
 }
 
-// 移动端其他设备视频全屏适配
-if(!(netease.ua.android && (netease.ua.weixin))){
+eResize('.video-box');
+$(window).bind("resize",function(){
   eResize('.video-box');
-  $(window).bind("resize",function(){
-	eResize('.video-box');
-  });
-}
+});
 function eResize(e){
   var cw = 640,
   ch = document.documentElement.clientHeight,
