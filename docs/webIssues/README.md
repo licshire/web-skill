@@ -2,13 +2,13 @@
 移动端开发常见问题汇总
 
 ## 目录
-- [全屏视频实现方法](#全屏视频实现方法)
+- [PC全屏视频实现方法](#PC全屏视频实现方法)
 - [需要长按但不选中文本的方法](#需要长按但不选中文本的方法)
 - [二维码在微信客户端长按识别注意事项](#二维码在微信客户端长按识别注意事项)
 - [安卓输入框弹出键盘遮盖住文本框的解决办法](#安卓输入框弹出键盘遮盖住文本框的解决办法)
-- [安卓全屏视频无播放条高度保持不变解决办法](#安卓全屏视频无播放条高度保持不变解决办法)
+- [移动端全屏视频播放解决办法](#移动端全屏视频播放解决办法)
 
-### 全屏视频实现方法
+### PC全屏视频实现方法
 
 ```html
 //HTML
@@ -88,7 +88,7 @@ if(/Android [4-6]/.test(navigator.appVersion)) {
 }
 ```
 
-### 安卓全屏视频无播放条高度保持不变解决办法
+### 移动端全屏视频播放解决办法
 
 安卓微信默认与使用X5同层对比图
 ![安卓微信默认与使用X5同层对比图](../../images/fullScene.jpg)
@@ -99,15 +99,25 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 ```html
 <meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
 <body>
+<div class="video-box">
   <!--安卓下视频蒙版 点击播放视频-->
   <div class="masker"></div>
   <!--X5播放器下伪标题栏-->
   <header id="header" class="header"></header>
   <video id="video" class="video" poster="img/bg.jpg" src="http://flv2.bn.netease.com/videolib3/1707/31/UwslJ1623/HD/UwslJ1623-mobile.mp4" width="640" preload="auto" x-webkit-airplay="true" playsinline="true" webkit-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true"></video>
+</div>
 </body>
 ```
 
 ```css
+.video-box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none no-repeat center; 
+}
 .video {
   position: absolute;
 }
@@ -166,4 +176,23 @@ if(netease.ua.android && (netease.ua.weixin || netease.ua.newsapp)){
     },500);
   });
 }
+
+// 移动端其他设备视频全屏适配
+if(!(netease.ua.android && (netease.ua.weixin))){
+  eResize('.video-box');
+  $(window).bind("resize",function(){
+	eResize('.video-box');
+  });
+}
+function eResize(e){
+	var cw = 640,
+	ch = document.documentElement.clientHeight,
+		vScale, vwScale, vhScale;
+	vwScale = cw / 640, vhScale = ch / 1030;
+	vScale = vwScale > vhScale ? vwScale : vhScale;
+	$(e).css({
+		'-webkit-transform': 'scale(' + vScale + ')',
+		'-webkit-transform-origin': 'center top'
+	});
+} 
 ```
