@@ -100,68 +100,78 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 <meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
 <body>
 <div class="video-box">
-  <!--安卓下视频蒙版 点击播放视频-->
-  <div class="masker">
-    <div class="btn-play"></div>
-  </div>
-  <!--X5播放器下伪标题栏-->
-  <header id="header" class="header"></header>
-  <video id="video" class="video" poster="img/bg.jpg" src="http://flv2.bn.netease.com/videolib3/1707/31/UwslJ1623/HD/UwslJ1623-mobile.mp4" width="640" preload="auto" x-webkit-airplay="true" playsinline="true" webkit-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true"></video>
+	<!--安卓下视频蒙版 点击播放视频-->
+	<div class="masker">
+	    <div class="btn-play"></div>
+	</div>
+	<!--X5播放器下伪标题栏-->
+	<header id="header" class="header"></header>
+	<video id="video" 
+	  class="video" 
+	  poster="img/bg.jpg" 
+	  src="http://flv2.bn.netease.com/videolib3/1707/31/UwslJ1623/HD/UwslJ1623-mobile.mp4" 
+	  preload="auto" 
+	  x-webkit-airplay="true" 
+	  playsinline="true" 
+	  webkit-playsinline="true" 
+	  x5-video-player-type="h5" 
+	  x5-video-player-fullscreen="true">
+	</video>
 </div>
 </body>
 ```
 
 ```css
 .video-box {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: none no-repeat center; 
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: none no-repeat center; 
 }
 .video {
-  position: absolute;
-  width: 100%;
+	position: absolute;
+	width: 100%;
 }
 .fullscreen .video {
-  width: 100%;
-  height: 100%;
-  /*X5播放器视频的位置，此处下移128像素*/
-  object-position: center 128px;
+	width: 100%;
+	height: 100%;
+	/*X5播放器视频的位置，此处下移128像素*/
+	object-position: center 128px;
 }
 /*X5播放器下伪标题栏*/
 .fullscreen .header {
-  width: 100%;
-  height: 128px;
-  background: #373B3E;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999;
+	width: 100%;
+	height: 128px;
+	background: #373B3E;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
 }
 .masker{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: url("../img/poster.jpg") no-repeat center;
-  z-index: 100;
-  display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("../img/poster.jpg") no-repeat center;
+	z-index: 100;
+	display: none;
 }
 .btn-play{
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  margin: auto;
-  background: url("http://go.163.com/2017/0914/xx2/img/btn-play.png") no-repeat;
-  -webkit-background-size: 100% 100%;
-  background-size: 100% 100%;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	background: url("http://go.163.com/2017/0914/xx2/img/btn-play.png") no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
 }
 ```
 
@@ -170,38 +180,38 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 var player = document.getElementById('video');
 
 player.addEventListener('x5videoenterfullscreen', function() {
-  // 在body上添加样式类以控制全屏下的展示
-  document.body.classList.add('fullscreen');
+	// 在body上添加样式类以控制全屏下的展示
+	document.body.classList.add('fullscreen');
 });
 
 player.addEventListener('x5videoexitfullscreen', function() {
-  document.body.classList.remove('fullscreen');
+	document.body.classList.remove('fullscreen');
 }, false);
 
 // 安卓下视频蒙版控制
 if(netease.ua.android && (netease.ua.weixin || netease.ua.newsapp)){
-  $('.masker').show();
-  $('.masker').click(function(){
-    $('#video')[0].play();
-    setTimeout(function(){
-      $('.masker').hide();
-    },500);
-  });
+	$('.masker').show();
+	$('.masker').click(function(){
+		$('#video')[0].play();
+		setTimeout(function(){
+			$('.masker').hide();
+		},500);
+	});
 }
 
 eResize('.video-box');
 $(window).bind("resize",function(){
-  eResize('.video-box');
+	eResize('.video-box');
 });
 function eResize(e){
-  var cw = 640,
-  ch = document.documentElement.clientHeight,
-  vScale, vwScale, vhScale;
-  vwScale = cw / 640, vhScale = ch / 1030;
-  vScale = vwScale > vhScale ? vwScale : vhScale;
-  $(e).css({
-	'-webkit-transform': 'scale(' + vScale + ')',
-	'-webkit-transform-origin': 'center top'
-  });
+	var cw = 640,
+	ch = document.documentElement.clientHeight,
+	vScale, vwScale, vhScale;
+	vwScale = cw / 640, vhScale = ch / 1030;
+	vScale = vwScale > vhScale ? vwScale : vhScale;
+	$(e).css({
+		'-webkit-transform': 'scale(' + vScale + ')',
+		'-webkit-transform-origin': 'center top'
+	});
 } 
 ```
