@@ -101,7 +101,9 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 <body>
 <div class="video-box">
   <!--安卓下视频蒙版 点击播放视频-->
-  <div class="masker"></div>
+  <div class="masker">
+    <div class="btn-play"></div>
+  </div>
   <!--X5播放器下伪标题栏-->
   <header id="header" class="header"></header>
   <video id="video" class="video" poster="img/bg.jpg" src="http://flv2.bn.netease.com/videolib3/1707/31/UwslJ1623/HD/UwslJ1623-mobile.mp4" width="640" preload="auto" x-webkit-airplay="true" playsinline="true" webkit-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true"></video>
@@ -147,6 +149,19 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
   z-index: 100;
   display: none;
 }
+.btn-play{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  background: url("http://go.163.com/2017/0914/xx2/img/btn-play.png") no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
 ```
 
 ```javascript
@@ -185,14 +200,14 @@ if(!(netease.ua.android && (netease.ua.weixin))){
   });
 }
 function eResize(e){
-	var cw = 640,
-	ch = document.documentElement.clientHeight,
-		vScale, vwScale, vhScale;
-	vwScale = cw / 640, vhScale = ch / 1030;
-	vScale = vwScale > vhScale ? vwScale : vhScale;
-	$(e).css({
-		'-webkit-transform': 'scale(' + vScale + ')',
-		'-webkit-transform-origin': 'center top'
-	});
+  var cw = 640,
+  ch = document.documentElement.clientHeight,
+  vScale, vwScale, vhScale;
+  vwScale = cw / 640, vhScale = ch / 1030;
+  vScale = vwScale > vhScale ? vwScale : vhScale;
+  $(e).css({
+	'-webkit-transform': 'scale(' + vScale + ')',
+	'-webkit-transform-origin': 'center top'
+  });
 } 
 ```
