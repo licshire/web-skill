@@ -176,7 +176,7 @@ Demo： [点此查看](http://test.go.163.com/go/2015/public/team/ningbo/geyouta
 ```
 
 ```javascript
-// 设置X5播放器的宽高
+// 安卓微信下X5播放器初始化
 var player = document.getElementById('video');
 
 player.addEventListener('x5videoenterfullscreen', function() {
