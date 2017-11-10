@@ -2,13 +2,41 @@
 移动端开发常见问题汇总
 
 ## 目录
+- [视频自适应全屏实现方法](#视频自适应全屏实现方法)
 - [PC全屏视频实现方法](#PC全屏视频实现方法)
 - [需要长按但不选中文本的方法](#需要长按但不选中文本的方法)
 - [二维码在微信客户端长按识别注意事项](#二维码在微信客户端长按识别注意事项)
 - [安卓输入框弹出键盘遮盖住文本框的解决办法](#安卓输入框弹出键盘遮盖住文本框的解决办法)
 - [移动端全屏视频播放解决办法](#移动端全屏视频播放解决办法)
 
+### 视频自适应全屏实现方法
+
+```html
+<div class="video-box">
+	<video class="video poster="" src="" preload="auto" x-webkit-airplay="true" playsinline="true" webkit-playsinline="true"></video>
+</div>
+```
+
+```css
+.video-box {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: none no-repeat center; 
+}
+
+.video{
+	width:100%;
+	height:100%;
+	object-fit: cover;
+}
+
+```
+
 ### PC全屏视频实现方法
+
 
 ```html
 //HTML
