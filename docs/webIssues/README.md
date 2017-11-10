@@ -24,7 +24,6 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: none no-repeat center; 
 }
 
 .video{
