@@ -2,7 +2,7 @@
 关于前端的技术文章，总结前端开发技巧，以及在实际开发中遇到的问题和解决方案。
 
 ## 目录 ##
-1. [rem布局](https://github.com/randomlwh/f2e-rem)(移动端rem布局)
+1. [rem布局](https://github.com/randomlwh/f2e-rem) (移动端rem布局)
 2. [图片序列帧](http://tgideas.github.io/motion/doc/data/component/mo.Film.html)（支持多图形式和雪碧图形式）
 3. [抽奖组件](http://tgideas.github.io/motion/doc/data/component/mo.Lottery.html)（支持圆形转盘抽奖和普通方形样式抽奖）
 4. [图片编辑组件](https://github.com/rkweb/imgEditor)（支持图片移动、缩放、旋转、导出编辑后的图片base64） 
