@@ -8,7 +8,7 @@
 
 1. [rem布局](https://github.com/randomlwh/f2e-rem)（移动端rem布局）
 2. [PC全屏翻页](https://github.com/momo1030/Plugins/tree/master/pc-responsive)（PC自适应全屏翻页，基于swiper2）
-3. [rem横竖屏旋转](https://github.com/randomlwh/f2e-rem-rotate)（解决横屏布局的旋转问题）
+3. [横屏布局的旋转解决方案](https://github.com/randomlwh/f2e-rem-rotate)（rem布局，解决横屏布局的旋转问题）
 
 ### 接口类
 
