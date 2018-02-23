@@ -14,6 +14,7 @@
 ![步骤三](./img/3.png)
 
 4. 项目设置,依次点开Setting->Pipelines,点击 Enable for this project按钮。 如图：
+> 注意：提交代码之前要进行此设置，提交代码之后再设置这个，可能测试链接打不开
 
 ![步骤四](./img/4.png)
 
