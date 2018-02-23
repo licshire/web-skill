@@ -1,6 +1,6 @@
 # gitLab 项目创建指南
 
-1. 登录gitLab账号，选择项目目录。如图：
+1. 登录gitLab账号 https://g.hz.netease.com/ ，选择项目目录。如图：
 
 ![步骤一](./img/1.png)
 
