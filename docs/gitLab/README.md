@@ -29,7 +29,7 @@
 
 7. 本地创建项目和提交，如图：
 > 先安装这个插件 https://www.npmjs.com/package/netease-f2e  ps：安装过就不必安装了，mac上.gitlab-ci.yml文件默认是隐藏的，Command+Shift+. 可
-以.显示隐藏文件、文件夹，再按一次，恢复隐藏
+以显示隐藏文件、文件夹，再按一次，恢复隐藏
 
 > `git config --global credential.helper store`   用户名和密码永久缓存
 
