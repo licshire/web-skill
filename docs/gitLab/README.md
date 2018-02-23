@@ -21,7 +21,8 @@
 
 ![步骤五](./img/7.png)
 
-6. 在本地创建项目目录，找任意盘符下面创建web/sale_auto 和 web/sale_auto
+6. 在本地创建项目目录，找任意盘符下面创建web/sale_auto 和 web/sale_go
+> 项目的前级目录必须为sale_auto或者sale_go
 
 ![步骤五](./img/8.png)
 
