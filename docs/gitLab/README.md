@@ -32,7 +32,8 @@
 
 > `git config --global credential.helper store`   用户名和密码永久缓存
 
-  * `git clone https://g.hz.netease.com/sale_go/20180223_test.git`
+  
+  * `git clone https://g.hz.netease.com/sale_go/20180223_test.git`
   * `cd 20180223_test`
   * `fe init`
   * `git add.`
