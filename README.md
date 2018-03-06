@@ -58,6 +58,7 @@
 
 1. [基于gulp的构建工具](https://github.com/rkweb/gulp-tool)（包括css、js合并压缩、图片压缩（支持jpg、png、gif压缩）、保存代码时浏览器自动刷新、sass编译、生成雪碧图、自动生成版本号等）
 
+2. [gulp开发打包工具](https://github.com/wbbhacker/f2e-gulp)
 
 ### gitLab 使用指南
 1. [gitLab项目创建](./docs/gitLab/README.md)
